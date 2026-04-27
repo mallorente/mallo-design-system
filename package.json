@@ -16,7 +16,7 @@
   },
   "files": [
     "dist",
-    "src/tokens.css"
+    "src"
   ],
   "scripts": {
     "build": "tsup",
