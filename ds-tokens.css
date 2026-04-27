@@ -1,0 +1,94 @@
+/* ============================================
+   Mallorentec · Design System Tokens
+   ============================================ */
+
+:root {
+  /* — Color ————————————————— */
+  --ml-marino: #2A3D66;
+  --ml-marino-ink: #0F1626;      /* marino muy oscuro para tinta sobre crema */
+  --ml-marino-2: #3A5180;         /* hover / variante más clara */
+  --ml-crema: #F1E9D2;
+  --ml-crema-2: #EADFBF;          /* crema más saturado (alt bg) */
+  --ml-tomate: #FF6A47;
+  --ml-tomate-dark: #E04D2C;
+  --ml-sol: #F5C842;
+  --ml-plum: #7A3B6B;             /* acento raro, uso limitado */
+
+  /* — Semantic */
+  --ml-bg: var(--ml-marino);
+  --ml-fg: var(--ml-crema);
+  --ml-fg-dim: rgba(241, 233, 210, 0.65);
+  --ml-line: rgba(241, 233, 210, 0.25);
+  --ml-accent: var(--ml-tomate);
+  --ml-accent-2: var(--ml-sol);
+
+  /* — Type ————————————————— */
+  --ml-display: 'Space Grotesk', system-ui, sans-serif;
+  --ml-body: 'Inter', system-ui, sans-serif;
+  --ml-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* escala tipográfica — modular 1.25 */
+  --ml-fs-xs:   11px;
+  --ml-fs-sm:   13px;
+  --ml-fs-base: 15px;
+  --ml-fs-md:   18px;
+  --ml-fs-lg:   22px;
+  --ml-fs-xl:   28px;
+  --ml-fs-2xl:  40px;
+  --ml-fs-3xl:  56px;
+  --ml-fs-4xl:  80px;
+  --ml-fs-hero: 120px;
+
+  /* — Spacing (escala 4) */
+  --ml-sp-1: 4px;
+  --ml-sp-2: 8px;
+  --ml-sp-3: 12px;
+  --ml-sp-4: 16px;
+  --ml-sp-5: 24px;
+  --ml-sp-6: 32px;
+  --ml-sp-7: 48px;
+  --ml-sp-8: 64px;
+  --ml-sp-9: 96px;
+
+  /* — Layout */
+  --ml-container: 1200px;
+  --ml-radius: 0px;             /* marcadamente sin radios — estética riso */
+  --ml-radius-soft: 6px;        /* solo en botones suaves / tags */
+  --ml-border: 1.5px;
+
+  /* — Motion */
+  --ml-ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ml-dur: 180ms;
+}
+
+/* Reset ligero */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--ml-bg);
+  color: var(--ml-fg);
+  font-family: var(--ml-body);
+  font-size: var(--ml-fs-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography utilities */
+.ml-display { font-family: var(--ml-display); font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; }
+.ml-display-xl { font-family: var(--ml-display); font-weight: 700; letter-spacing: -0.04em; line-height: 0.85; font-size: var(--ml-fs-4xl); }
+.ml-body { font-family: var(--ml-body); }
+.ml-mono { font-family: var(--ml-mono); font-size: var(--ml-fs-xs); letter-spacing: 0.14em; text-transform: uppercase; }
+.ml-eyebrow { font-family: var(--ml-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; }
+
+.ml-accent { color: var(--ml-tomate); }
+.ml-dim    { color: var(--ml-fg-dim); }
+
+/* Selection */
+::selection { background: var(--ml-tomate); color: var(--ml-crema); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ml-marino-ink); }
+::-webkit-scrollbar-thumb { background: var(--ml-marino-2); border: 2px solid var(--ml-marino-ink); }
+::-webkit-scrollbar-thumb:hover { background: var(--ml-tomate); }
